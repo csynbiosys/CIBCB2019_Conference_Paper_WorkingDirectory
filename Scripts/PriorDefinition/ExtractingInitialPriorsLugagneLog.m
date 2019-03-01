@@ -1,3 +1,5 @@
+% ------------------- PRIORS DEFINITION ------------------------
+
 % Definition of priors based on parameter estimates in Lugagne et al.
 % Parameters obtained upon fitting on the calibration data in Nat.Com 2017
 %% 
@@ -34,7 +36,7 @@ k_aTc = 1e-1;
 k_in_aTc = 1e-1;
 k_out_aTc = 1e-1;
 
-%% For the unknown parameters, build normal prior centered on the mean and covering 0.5-1.5 times their value
+%% For the unknown parameters, build normal prior centered on the mean and covering 0.1-10 times their value
 Params = [k_Lm0*k_Lp k_Lm*k_Lp Theta_T Theta_aTc n_aTc n_T k_Tm0*k_Tp k_Tm*k_Tp Theta_L Theta_IPTG n_IPTG n_L k_IPTG k_in_IPTG k_out_IPTG k_aTc k_in_aTc k_out_aTc];
 Mean = zeros(1,length(Params)+4);
 Std = Mean;
